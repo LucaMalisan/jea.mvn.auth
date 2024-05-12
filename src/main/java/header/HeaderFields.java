@@ -1,5 +1,9 @@
 package header;
 
+/**
+ * Standardized names for header fields in a request
+ */
+
 public class HeaderFields {
 
     public static final String AUTHORIZATION = "Authorization";
