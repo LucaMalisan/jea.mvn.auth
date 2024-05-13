@@ -12,7 +12,7 @@ public class CookieUtils {
      */
 
     public static Cookie getCookieByNameOrNull(HttpServletRequest request, String name) {
-        if(request.getCookies().length == 0) {
+        if(request.getCookies() == null || request.getCookies().length == 0) {
             return null;
         }
 

@@ -26,5 +26,10 @@
       <version>10.1.19</version>
       <scope>compile</scope>
     </dependency>
+    <dependency>
+      <groupId>jea</groupId>
+      <artifactId>mvn.request</artifactId>
+      <version>1.0</version>
+    </dependency>
   </dependencies>
 </project>
