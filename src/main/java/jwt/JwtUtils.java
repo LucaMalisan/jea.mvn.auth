@@ -1,8 +1,8 @@
 package jwt;
 
-import header.HeaderFields;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
+import request.HeaderFields;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
