@@ -12,7 +12,7 @@ public class JwtRestUtil {
     public static final String JWT_PASSING_REST_URI = "pass-jwt";
 
     public static String generateAuthRestURI(String targetUrl) {
-        return targetUrl + "/rest/" + JWT_PASSING_REST_URI;
+        return targetUrl + "rest/" + JWT_PASSING_REST_URI;
     }
 
     public static String generateClientId(HttpServletRequest request) {

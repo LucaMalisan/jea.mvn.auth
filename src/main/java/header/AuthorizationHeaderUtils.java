@@ -21,6 +21,6 @@ public class AuthorizationHeaderUtils {
     }
 
     public static URI generateLoginRedirectURL(HttpServletRequest request) {
-        return URI.create("http://192.168.56.1:8084/login" + generateCallbackParameter(request));
+        return URI.create("http://localhost:8084/login" + generateCallbackParameter(request));
     }
 }
