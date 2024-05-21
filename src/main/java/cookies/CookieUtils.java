@@ -7,6 +7,8 @@ import java.util.Arrays;
 
 public class CookieUtils {
 
+    public static final String AUTHORIZATION_COOKIE = "authorization";
+
     /**
      * Filters all cookies of the current request for the given name
      */
@@ -19,20 +21,6 @@ public class CookieUtils {
         return Arrays.stream(request.getCookies())
                 .filter(e -> e.getName().equals(name))
                 .findAny().orElse(null);
-    }
-
-    /**
-     * Read current URL and create a standardized callback cookie to be sent to the login handler.
-     * Through this cookie, it is determined where to redirect after a successful login
-     */
-
-    public static Cookie generateCallbackCookie(HttpServletRequest request) {
-        String absoluteURL = String.format(
-                "%s://%s:%d",
-                request.getScheme(),
-                request.getServerName(),
-                request.getServerPort());
-        return new Cookie(CookieNames.CALLBACK, absoluteURL);
     }
 
     /**
