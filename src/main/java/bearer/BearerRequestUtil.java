@@ -1,6 +1,9 @@
 package bearer;
 
+import request.HeaderFields;
 import request.HttpRequestUtil;
+
+import java.util.Map;
 
 public class BearerRequestUtil {
 
@@ -19,7 +22,7 @@ public class BearerRequestUtil {
                 String.format(dataFormat, "redirect_uri", "urn:ietf:wg:oauth:2.0:oob") +
                 String.format(dataFormat, "audience", audience);
 
-        return HttpRequestUtil.createHttpRequestAndGetResponse(oauthUrl, "POST", authorization, data);
+        return HttpRequestUtil.createHttpRequestAndGetResponse(oauthUrl, "POST", data, Map.of(HeaderFields.AUTHORIZATION, authorization));
     }
 
 }
