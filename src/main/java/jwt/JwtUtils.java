@@ -2,6 +2,7 @@ package jwt;
 
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
+import json.JsonUtil;
 import request.HeaderFields;
 
 import java.nio.charset.StandardCharsets;
@@ -49,9 +50,6 @@ public class JwtUtils {
      */
 
     public static Map<String, String> splitDecodedJWTIntoMap(String str) {
-        return Arrays.stream(str.split(","))
-                .map(e -> e.replace("\"", ""))
-                .map(e -> e.split(":"))
-                .collect(Collectors.toMap(e -> e[0].trim(), e -> e[1].trim()));
+        return JsonUtil.jsonStringToMap(str);
     }
 }
