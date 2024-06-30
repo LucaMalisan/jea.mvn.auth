@@ -29,7 +29,8 @@
     <dependency>
       <groupId>jea</groupId>
       <artifactId>mvn.request</artifactId>
-      <version>1.5</version>
+      <version>1.6</version>
+      <scope>compile</scope>
     </dependency>
   </dependencies>
 </project>
